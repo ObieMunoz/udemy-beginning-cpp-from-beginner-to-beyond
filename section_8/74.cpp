@@ -16,30 +16,20 @@ int main()
 	int dimes{0};
 	int nickels{0};
 	int pennies{0};
-	if (cents >= 100) 
-	{
-		dollars = cents / 100;
-		cents -= dollars * 100;
-	}
-	if (cents >= 25) 
-	{
-		quarters = cents / 25;
-		cents -= quarters * 25;
-	}
-	if (cents >= 10)
-	{
-		dimes = cents / 10;
-		cents -= dimes * 10;
-	}
-	if (cents >= 5)
-	{
-		nickels = cents / 5;
-		cents -= nickels * 5;
-	}
-	if (cents >= 1)
-	{
-		pennies = cents;
-	}
+
+	dollars = cents / 100;
+	cents -= dollars * 100;
+	
+	quarters = cents / 25;
+	cents -= quarters * 25;
+	
+	dimes = cents / 10;
+	cents -= dimes * 10;
+	
+	nickels = cents / 5;
+	cents -= nickels * 5;
+	
+	pennies = cents;
 	cout << "You can provide change for this as follows : " << endl;
 	cout << "Dollars: " << dollars << endl;
 	cout << "Quarters: " << quarters << endl;
